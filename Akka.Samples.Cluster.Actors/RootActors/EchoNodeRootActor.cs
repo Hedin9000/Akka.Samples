@@ -7,6 +7,7 @@ public class EchoNodeRootActor : BaseRootActor
 {
     public EchoNodeRootActor()
     {
-         Context.ActorOf(Props.Create(()=> new EchoActor(DeployPath)),"echoService");
+         Context.ActorOf(Props.Create(()=> new EchoActor()),"echoService");
+         Context.ActorOf(Props.Create(()=> new PingActor()),"pingService");
     }
 }

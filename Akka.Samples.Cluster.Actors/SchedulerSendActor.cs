@@ -7,19 +7,20 @@ public class SchedulerSendActor :ReceiveActor
 {
     public SchedulerSendActor(string deployPath)
     {
-        var remoteEcho1 = Context.ActorSelection($"{deployPath}/pingNode/c1/echoService");
-        //     .ResolveOne(TimeSpan.FromSeconds(30))
-        //     .ConfigureAwait(false)
-        //     .GetAwaiter()
-        //     .GetResult();
+        // var echoService = Context.ActorSelection($"{deployPath}/pingNode/c1/echoService");
 
-    
+        Receive<PingMessage>(message =>
+        {
+            Console.WriteLine(message.Text);
+        });
+        
+        var echoService = Context.ActorSelection($"{deployPath}/pingNode/c1/pingService");
 
         Context.System.Scheduler.ScheduleTellRepeatedlyCancelable(
             initialDelay: TimeSpan.FromSeconds(5),
             interval: TimeSpan.FromSeconds(1),
-            receiver: remoteEcho1,
-            message: new PingMessage() { Text = "TEST CONTENT" },
+            receiver: echoService,
+            message: new PingMessage("TEST CONTENT"),
             sender: Self
         );
     }

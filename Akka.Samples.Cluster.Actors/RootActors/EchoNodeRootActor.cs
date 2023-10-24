@@ -5,10 +5,8 @@ namespace Akka.Samples.Cluster.Actors.RootActors;
 
 public class EchoNodeRootActor : BaseRootActor
 {
-
-
     public EchoNodeRootActor()
     {
-         Context.ActorOf(Props.Create(()=> new PingActor(DeployPath)),"pingService");
+         Context.ActorOf(Props.Create(()=> new EchoActor(DeployPath)),"echoService");
     }
 }

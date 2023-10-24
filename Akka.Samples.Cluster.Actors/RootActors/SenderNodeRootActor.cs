@@ -7,7 +7,6 @@ public class SenderNodeRootActor : BaseRootActor
 {
     public SenderNodeRootActor()
     {
-        // локальный актор, фактически выполняющий работу
         Context.ActorOf(Props.Create(()=> new SchedulerSendActor(DeployPath)),"shedulerSender");
     }
 

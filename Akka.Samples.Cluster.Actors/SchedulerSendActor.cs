@@ -7,7 +7,7 @@ public class SchedulerSendActor :ReceiveActor
 {
     public SchedulerSendActor(string deployPath)
     {
-        var remoteEcho1 = Context.ActorSelection($"{deployPath}/pingNode");
+        var remoteEcho1 = Context.ActorSelection($"{deployPath}/pingNode/c1/pingService");
         //     .ResolveOne(TimeSpan.FromSeconds(30))
         //     .ConfigureAwait(false)
         //     .GetAwaiter()

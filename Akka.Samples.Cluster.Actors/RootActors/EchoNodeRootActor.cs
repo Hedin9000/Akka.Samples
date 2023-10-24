@@ -9,9 +9,6 @@ public class EchoNodeRootActor : BaseRootActor
 
     public EchoNodeRootActor()
     {
-         Receive<PingMessage>((s => Console.WriteLine($"Work:{s.Text}")));
-        //TODO: создать как дочерний актор
-       // Context.ActorOf(Props.Create(()=> new PingActor(DeployPath)),"pingService");
-       
+         Context.ActorOf(Props.Create(()=> new PingActor(DeployPath)),"pingService");
     }
 }

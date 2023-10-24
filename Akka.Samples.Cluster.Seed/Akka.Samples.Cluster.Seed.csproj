@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Akka" Version="1.5.13" />
+      <PackageReference Include="Akka.Cluster" Version="1.5.13" />
+      <PackageReference Include="Akka.Cluster.Tools" Version="1.5.13" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Akka.Samples.Cluster.Actors\Akka.Samples.Cluster.Actors.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="akka.conf">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
+</Project>

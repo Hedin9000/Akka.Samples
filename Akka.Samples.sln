@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Akka.Samples.Cluster", "Akka.Samples.Cluster", "{DA595488-4D53-4299-9131-C0682838B643}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Akka.Samples.Cluster.Actors", "Akka.Samples.Cluster.Actors\Akka.Samples.Cluster.Actors.csproj", "{EC813FD6-73A5-486E-B451-1F8B6C973269}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Akka.Samples.Cluster.Common", "Akka.Samples.Cluster.Common\Akka.Samples.Cluster.Common.csproj", "{BB90632A-ED84-41D0-8F1C-C0A38C1FF3E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Akka.Samples.Cluster.Seed", "Akka.Samples.Cluster.Seed\Akka.Samples.Cluster.Seed.csproj", "{8A05DB8B-9402-4866-BB9F-8DD6E8EA6922}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Akka.Samples.Cluster.SenderNode", "Akka.Samples.Cluster.SenderNode\Akka.Samples.Cluster.SenderNode.csproj", "{20F80AAB-4462-4A8A-8CAF-202B788D2CD3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Akka.Samples.Cluster.WorkNode", "Akka.Samples.Cluster.WorkNode\Akka.Samples.Cluster.WorkNode.csproj", "{C77EC5ED-AFD2-459F-8262-7BC31FF08C8F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EC813FD6-73A5-486E-B451-1F8B6C973269}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC813FD6-73A5-486E-B451-1F8B6C973269}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC813FD6-73A5-486E-B451-1F8B6C973269}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC813FD6-73A5-486E-B451-1F8B6C973269}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB90632A-ED84-41D0-8F1C-C0A38C1FF3E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB90632A-ED84-41D0-8F1C-C0A38C1FF3E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB90632A-ED84-41D0-8F1C-C0A38C1FF3E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB90632A-ED84-41D0-8F1C-C0A38C1FF3E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A05DB8B-9402-4866-BB9F-8DD6E8EA6922}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A05DB8B-9402-4866-BB9F-8DD6E8EA6922}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A05DB8B-9402-4866-BB9F-8DD6E8EA6922}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A05DB8B-9402-4866-BB9F-8DD6E8EA6922}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20F80AAB-4462-4A8A-8CAF-202B788D2CD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20F80AAB-4462-4A8A-8CAF-202B788D2CD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20F80AAB-4462-4A8A-8CAF-202B788D2CD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20F80AAB-4462-4A8A-8CAF-202B788D2CD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C77EC5ED-AFD2-459F-8262-7BC31FF08C8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C77EC5ED-AFD2-459F-8262-7BC31FF08C8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C77EC5ED-AFD2-459F-8262-7BC31FF08C8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C77EC5ED-AFD2-459F-8262-7BC31FF08C8F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EC813FD6-73A5-486E-B451-1F8B6C973269} = {DA595488-4D53-4299-9131-C0682838B643}
+		{BB90632A-ED84-41D0-8F1C-C0A38C1FF3E6} = {DA595488-4D53-4299-9131-C0682838B643}
+		{8A05DB8B-9402-4866-BB9F-8DD6E8EA6922} = {DA595488-4D53-4299-9131-C0682838B643}
+		{20F80AAB-4462-4A8A-8CAF-202B788D2CD3} = {DA595488-4D53-4299-9131-C0682838B643}
+		{C77EC5ED-AFD2-459F-8262-7BC31FF08C8F} = {DA595488-4D53-4299-9131-C0682838B643}
+	EndGlobalSection
+EndGlobal

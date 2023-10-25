@@ -1,15 +1,10 @@
 ﻿using System.Collections.Immutable;
 using Akka.Actor;
 using Akka.Cluster.Tools.Client;
-using Akka.Routing;
 using Akka.Samples.Cluster.Common;
-using Akka.Samples.ClusterClient;
 
 var actorSystem = BootstrapNode.InitAkka();
-//"akka.tcp://ClusterSystem@localhost:8081"
 var immutableHashSet = ImmutableHashSet.Create<ActorPath>(ActorPath.Parse("akka.tcp://ClusterSystem@localhost:8081/system/receptionist"));
-
-
 
 var settings = ClusterClientSettings.Create(actorSystem).WithInitialContacts(immutableHashSet);
 
@@ -17,10 +12,15 @@ var settings = ClusterClientSettings.Create(actorSystem).WithInitialContacts(imm
 var actorClusterClientRef = actorSystem.ActorOf(ClusterClient.Props(settings), "client");
 
 while (true)
-{ 
-    actorClusterClientRef.Tell(
-        new ClusterClient.Send("/user/cluster/manager/pingNode/c1/echoService", 
+{
+    var task = actorClusterClientRef.Ask<PingMessage>(
+        // путь до актора, без указания физического адреса.
+        new ClusterClient.Send("/user/cluster/manager/pingNode/c1/pingService", 
             new PingMessage("CLIENT ECHO")));
+    
+    var pingMessage = task.ConfigureAwait(false).GetAwaiter().GetResult();
+    
+    Console.WriteLine($"ASK:{pingMessage.Text}");
     Task.Delay(1000).ConfigureAwait(false).GetAwaiter().GetResult();
 }
 Console.ReadLine();

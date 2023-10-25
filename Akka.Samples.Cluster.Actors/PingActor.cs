@@ -10,7 +10,7 @@ public class PingActor : ReceiveActor
     {
         Receive<PingMessage>(message =>
         {
-            Console.WriteLine($"[PING-{GetNextPong()}]:{message.Text}");
+            //Console.WriteLine($"[PING-{GetNextPong()}]:{message.Text}");
             Context.Sender.Tell(new PingMessage($"[PONG]:{message.Text}"));
         });
     }

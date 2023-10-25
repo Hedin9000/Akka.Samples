@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Akka.Samples.Cluster.Sender
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Akka.Samples.Cluster.WorkNode", "Akka.Samples.Cluster.WorkNode\Akka.Samples.Cluster.WorkNode.csproj", "{C77EC5ED-AFD2-459F-8262-7BC31FF08C8F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Akka.Samples.ClusterClient", "Akka.Samples.ClusterClient\Akka.Samples.ClusterClient.csproj", "{3961CC1D-28E8-4F1C-A128-AA94BD649704}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +40,10 @@ Global
 		{C77EC5ED-AFD2-459F-8262-7BC31FF08C8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C77EC5ED-AFD2-459F-8262-7BC31FF08C8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C77EC5ED-AFD2-459F-8262-7BC31FF08C8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3961CC1D-28E8-4F1C-A128-AA94BD649704}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3961CC1D-28E8-4F1C-A128-AA94BD649704}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3961CC1D-28E8-4F1C-A128-AA94BD649704}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3961CC1D-28E8-4F1C-A128-AA94BD649704}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{EC813FD6-73A5-486E-B451-1F8B6C973269} = {DA595488-4D53-4299-9131-C0682838B643}

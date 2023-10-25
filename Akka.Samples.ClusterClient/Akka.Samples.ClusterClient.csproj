@@ -8,9 +8,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Akka" Version="1.5.13" />
-      <PackageReference Include="Akka.Cluster" Version="1.5.13" />
-      <PackageReference Include="Akka.Cluster.Tools" Version="1.5.13" />
+      <ProjectReference Include="..\Akka.Samples.Cluster.Actors\Akka.Samples.Cluster.Actors.csproj" />
     </ItemGroup>
 
     <ItemGroup>
@@ -20,7 +18,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Akka.Samples.Cluster.Actors\Akka.Samples.Cluster.Actors.csproj" />
+      <PackageReference Include="Akka.Cluster.Tools" Version="1.5.13" />
     </ItemGroup>
 
 </Project>

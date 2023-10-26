@@ -13,6 +13,11 @@ public class PingActor : ReceiveActor
             //Console.WriteLine($"[PING-{GetNextPong()}]:{message.Text}");
             Context.Sender.Tell(new PingMessage($"[PONG-{GetNextPong()}]:{message.Text}"));
         });
+        Receive<string>(message =>
+        {
+            //Console.WriteLine($"[PING-{GetNextPong()}]:{message.Text}");
+            Context.Sender.Tell( $"[PONG-{GetNextPong()}]:{message}");
+        });
     }
     private int GetNextPong() => _value++;
     

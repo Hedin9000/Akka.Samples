@@ -15,7 +15,7 @@ while (true)
 {
     var task = actorClusterClientRef.Ask<PingMessage>(
         // путь до актора, без указания физического адреса.
-        new ClusterClient.Send("/user/cluster/manager/pingNode/c1/pingService", 
+        new ClusterClient.Send("/user/cluster/manager/pingNode/c1/clientRequest", 
             new PingMessage("CLIENT ECHO")));
     
     var pingMessage = task.ConfigureAwait(false).GetAwaiter().GetResult();

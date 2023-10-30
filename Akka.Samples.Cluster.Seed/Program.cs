@@ -23,7 +23,11 @@ var clusterSingletonManager = ClusterSingletonManager.Props(
 var singletonRef = actorSystem.ActorOf(clusterSingletonManager, name: "cluster");
 
 
-ClusterClientReceptionist.Get(actorSystem).RegisterService(singletonRef);
+while (true)
+{
+    
+    Task.Delay(1000).ConfigureAwait(false).GetAwaiter().GetResult();
+}
 
 
 

@@ -8,6 +8,13 @@
 
     <ItemGroup>
       <PackageReference Include="Akka" Version="1.5.13" />
+      <PackageReference Include="Jaeger" Version="1.0.3" />
+      <PackageReference Include="OpenTracing" Version="0.12.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\..\..\Work\source\DigTP.Pkg\DigTP.Sdk.AkkaMediator.Common\DigTP.Sdk.AkkaMediator.Common.csproj" />
+      <ProjectReference Include="..\..\..\..\Work\source\DigTP.Pkg\DigTP.Sdk.Tracing.Common\DigTP.Sdk.Tracing.Common.csproj" />
     </ItemGroup>
 
 </Project>

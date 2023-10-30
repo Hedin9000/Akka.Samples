@@ -12,5 +12,6 @@ public class SeedNodeRootActor : ReceiveActor
     {
         var pingNodeRef = Context.ActorOf(Props.Create<EchoNodeRootActor>().WithRouter(FromConfig.Instance),"pingNode");
         var schedulerNodeRef = Context.ActorOf(Props.Create<SenderNodeRootActor>().WithRouter(FromConfig.Instance),"schedulerNode");
+        var clientRouterNodeRef = Context.ActorOf(Props.Create<ClientRouterRootActor>().WithRouter(FromConfig.Instance),"clientRouterNode");
     }
 }
